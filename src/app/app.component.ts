@@ -7,4 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'intro-angular-idgs902';
+//funciones
+  duplicaN(n: number): number {
+    return n * 2;
+  }
+
+  //Objetos
+  alumno = {
+    matricula: 201910000,
+    nombre: 'Adriana',
+    apaterno: 'Barron',
+    amaterno: 'Rico',
+    Inscrito:'Si',
+    fechaNacimiento :new Date()
+  };
+
 }
