@@ -7,11 +7,16 @@ import { alumno } from './utl/idgs902.componet';
 import { IdgsComponent } from './utl/idgs/idgs.component';
 import { IricComponent } from './utl/iric/iric.component';
 import { MenuComponent } from './utl/menu/menu.component';
-import { FormsModule } from '@angular/forms';
+
 import { SumaComponent } from './utl/formularios/suma/suma.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { OperasBasComponent } from './utl/formularios/operas-bas/operas-bas.component';
-import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { OperasModule } from './utl/formularios/operas/operas.module';
+
+import { DistanciaDosPuntosModule } from './tarea/distancia-dos-puntos/distancia-dos-puntos.module';
+
+
+
 //import { IdgsComponent } from './utl/idgs/idgs.component';
 
 @NgModule({
@@ -23,14 +28,14 @@ import {MatInputModule} from '@angular/material/input';
     IricComponent,
     MenuComponent,
     SumaComponent,
-    OperasBasComponent,
-    //IdgsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatInputModule
+    OperasModule,
+    DistanciaDosPuntosModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
