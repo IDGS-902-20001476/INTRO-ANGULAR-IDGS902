@@ -10,10 +10,15 @@ import { MenuComponent } from './utl/menu/menu.component';
 
 import { SumaComponent } from './utl/formularios/suma/suma.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OperasModule } from './utl/formularios/operas/operas.module';
 
 import { DistanciaDosPuntosModule } from './tarea/distancia-dos-puntos/distancia-dos-puntos.module';
+import { Pract2Module } from './practicas/pract2/pract2.module';
+import { CalificacionAlumComponent } from './utl/calificacion-alum/calificacion-alum.component';
+import { AlumnoFilterPipe } from './utl/alumno-filter.pipe';
+import { AlumnoReactiveComponent } from './formularios/alumno-reactive/alumno-reactive.component';
+import { AppRoutingModule } from './app.routing.module';
 
 
 
@@ -28,13 +33,19 @@ import { DistanciaDosPuntosModule } from './tarea/distancia-dos-puntos/distancia
     IricComponent,
     MenuComponent,
     SumaComponent,
+    CalificacionAlumComponent,
+    AlumnoFilterPipe,
+    AlumnoReactiveComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
     OperasModule,
-    DistanciaDosPuntosModule
+    DistanciaDosPuntosModule,
+    Pract2Module,
+    ReactiveFormsModule,
+    AppRoutingModule
 
   ],
   providers: [],

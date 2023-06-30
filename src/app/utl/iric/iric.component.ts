@@ -13,6 +13,7 @@ export class IricComponent {
   imageMargin:number=2; 
   muestraImg:boolean=true;
   listFilter:string='';
+  alumnoTitle!:string
 
   showImage():void{
     this.muestraImg=!this.muestraImg;
@@ -25,23 +26,30 @@ export class IricComponent {
     nombre: 'Pedro',
     edad: 23,
     correo: 'pedro@gmail.com',
-    foto:'https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_960_720.png'
+    foto:'https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_960_720.png',
+    calif: 6.7
   },
   {
     matricula: 1235,
     nombre: 'Juan',
     edad: 24,
     correo: 'juan@gmail.com',
-    foto:'https://www.google.com/imgres?imgurl=https%3A%2F%2Fpublicdomainvectors.org%2Fphotos%2Ffemale-user-icon.png&tbnid=sE4IDoFgK04TbM&vet=12ahUKEwjgme7T1cb_AhW_E94AHQwzBzgQMygCegUIARDNAQ..i&imgrefurl=https%3A%2F%2Fpublicdomainvectors.org%2Fes%2Fvectoriales-gratuitas%2FImagen-de-icono-de-usuario-femenino%2F71148.html&docid=EtA9mfBAWvaE_M&w=500&h=499&q=imagenes%20de%20usuarios%20femenino&ved=2ahUKEwjgme7T1cb_AhW_E94AHQwzBzgQMygCegUIARDNAQ'
+    foto:'https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_960_720.png',
+    calif: 10
   },
   {
     matricula: 1236,
     nombre: 'Maria',
     edad: 25,
     correo: 'maria@gmail.com',
-    foto:'https://www.google.com/imgres?imgurl=https%3A%2F%2Fpublicdomainvectors.org%2Fphotos%2Ffemale-user-icon.png&tbnid=sE4IDoFgK04TbM&vet=12ahUKEwjgme7T1cb_AhW_E94AHQwzBzgQMygCegUIARDNAQ..i&imgrefurl=https%3A%2F%2Fpublicdomainvectors.org%2Fes%2Fvectoriales-gratuitas%2FImagen-de-icono-de-usuario-femenino%2F71148.html&docid=EtA9mfBAWvaE_M&w=500&h=499&q=imagenes%20de%20usuarios%20femenino&ved=2ahUKEwjgme7T1cb_AhW_E94AHQwzBzgQMygCegUIARDNAQ'
-  },
+    foto:'https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_960_720.png',
+    calif: 3.7
+   },
 
 ];
+
+  onCalificaClick(message:string){
+    this.alumnoTitle= `${message}`;
+  }
 
 }

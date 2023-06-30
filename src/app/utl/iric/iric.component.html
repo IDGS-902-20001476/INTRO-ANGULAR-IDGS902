@@ -27,20 +27,25 @@
                 <th>Nombre</th>
                 <th>Edad</th>
                 <th>Correo</th> 
+                <th>Calificacion {{alumnoTitle}}</th>
                 
             </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let alumno of alumnosIric">
+
+          <tr *ngFor="let alumno of alumnosIric |alumnoFilter:listFilter">
             <!-- <td><img *ngIf="muestraImg",[scr]="alumno.foto"
                 [title]="alumno.nombre"
-                [style.width.px]="alumno.ImagenWidth"
-                [style.margin.px]="alumno.Imagen"
+                [style.width.px]="imagenWidth"
+                [style.margin.px]="imagenMargin"
                 ></td> -->
             <td>{{alumno.matricula}}</td>
             <td>{{alumno.nombre}}</td>
             <td>{{alumno.edad}}</td>
             <td>{{alumno.correo}}</td>
+            <td>{{alumno.calif}}</td>
+            <td><app-calificacion-alum (calificaClick)="onCalificaClick($event)"
+                [califica]="alumno.calif"></app-calificacion-alum></td>
            
           </tr>
         </tbody>
